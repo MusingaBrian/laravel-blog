@@ -11,7 +11,7 @@
 <body>
     <div class="min-h-full">
         <x-navbar></x-navbar>
-        <x-heading>Heading</x-heading>
+        <x-heading>{{ $heading }}</x-heading>
 
         <main>
             <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
