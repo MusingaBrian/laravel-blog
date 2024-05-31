@@ -24,6 +24,11 @@ Route::get('jobs', function () {
 
     ]);
 });
+
+Route::get('/jobs/{id}', function ($id) {
+    dd($id);
+    return view('contact');
+});
 Route::get('contact', function () {
     return view('contact');
 });
