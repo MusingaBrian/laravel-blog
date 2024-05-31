@@ -1,4 +1,4 @@
-<div class="navbar bg-base-100">
+<div class="navbar bg-base-100 glass">
     <div class="navbar-start">
         <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -9,14 +9,14 @@
                     <x-navlink href="/">Home</x-navlink>
                 </li>
                 <li>
-                    <x-navlink href="/about">About</x-navlink>
+                    <x-navlink href="/jobs">Jobs</x-navlink>
                 </li>
                 <li>
                     <x-navlink href="/contact">Contact</x-navlink>
                 </li>
             </ul>
         </div>
-        <x-navlink href="/contact" class="btn btn-ghost text-2xl">BLOG</x-navlink>
+        <x-navlink href="/contact" class="btn btn-ghost text-2xl">{{ config('app.name') }}</x-navlink>
       </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
@@ -24,7 +24,7 @@
             <x-navlink href="/">Home</x-navlink>
         </li>
         <li>
-            <x-navlink href="/about">About</x-navlink>
+            <x-navlink href="/jobs">Jobs</x-navlink>
         </li>
         <li>
             <x-navlink href="/contact">Contact</x-navlink>

@@ -5,5 +5,7 @@
 @endsection
 
 @section('content')
-    <p>Hello Home Content</p>
+    <div class="p-8">
+        <p>Hello Home Content</p>
+    </div>
 @endsection
