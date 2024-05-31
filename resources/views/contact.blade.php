@@ -1,4 +1,9 @@
-<x-layout>
-    <x-slot:heading>Contact Page</x-slot>
-</x-layout>
+@extends('layout.layout')
+@section('title', 'Contact')
+@section('header')
+    <x-layout.navbar></x-layout>
+@endsection
 
+@section('content')
+    <p>Hello About Content</p>
+@endsection
