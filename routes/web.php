@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Job;
 
 Route::get('/', function () {
+    $jobs = Job::all();
+
+    dd($jobs);
+
     return view('home');
 })->name('home');
 
@@ -17,7 +21,6 @@ Route::get('jobs', function () {
 Route::get('/jobs/{id}', function ($id) {
 
     $job = Job::find($id);
-    // dd($job);
     return view('job', ['job' => $job]);
 })->name('job');
 
