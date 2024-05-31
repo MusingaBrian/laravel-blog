@@ -6,7 +6,7 @@
             </div>
             <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                 <li>
-                    <x-navlink href="/">Home</x-navlink>
+                    <x-navlink href="/" class="active">Home</x-navlink>
                 </li>
                 <li>
                     <x-navlink href="/jobs">Jobs</x-navlink>
@@ -21,13 +21,25 @@
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
         <li>
-            <x-navlink href="/">Home</x-navlink>
+            @if (request()->routeIs('home'))
+                <x-navlink href="{{ route('home') }}" class="active">Home</x-navlink>
+            @else 
+                <x-navlink href="{{ route('home') }}">Home</x-navlink>
+            @endif
         </li>
         <li>
-            <x-navlink href="/jobs">Jobs</x-navlink>
+            @if (request()->routeIs('jobs'))
+                <x-navlink href="{{ route('jobs') }}" class="active">Jobs</x-navlink>
+            @else 
+                <x-navlink href="{{ route('jobs') }}">Jobs</x-navlink>
+            @endif
         </li>
         <li>
-            <x-navlink href="/contact">Contact</x-navlink>
+            @if (request()->routeIs('contact'))
+                <x-navlink href="{{ route('contact') }}" class="active mx-2">Contact</x-navlink>
+            @else 
+                <x-navlink href="{{ route('contact') }}">Contact</x-navlink>
+            @endif
         </li>
       </ul>
     </div>

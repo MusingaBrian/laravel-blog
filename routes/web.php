@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 Route::get('jobs', function () {
     return view('jobs', [
         'jobs' => [
@@ -23,12 +23,12 @@ Route::get('jobs', function () {
         ],
 
     ]);
-});
+})->name('jobs');
 
-Route::get('/jobs/{id}', function ($id) {
-    dd($id);
-    return view('contact');
-});
+// Route::get('/jobs/{id}', function ($id) {
+//     dd($id);
+//     return view('contact');
+// });
 Route::get('contact', function () {
     return view('contact');
-});
+})->name('contact');
